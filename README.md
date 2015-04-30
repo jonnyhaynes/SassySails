@@ -1,5 +1,7 @@
 # SassySails
-A brand new Sails.js app set up to run Sass as standard.
+[![Code Climate](https://codeclimate.com/github/jonnyhaynes/SassySails/badges/gpa.svg)](https://codeclimate.com/github/jonnyhaynes/SassySails)
+
+A brand new [Sails.js](http://sailsjs.org/) app set up to run [Sass](http://sass-lang.com/) as standard.
 
 ##Installation
 
