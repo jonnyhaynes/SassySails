@@ -4,3 +4,15 @@ node_js:
 
 notifications:
   email: false
+  
+before_script:
+  - npm install -g jscs
+  - npm install -g jsinspect
+  - npm install -g jshint
+  - gem install scss-lint
+
+script:
+  - scs assets/js/**.js
+  - jsinspect assets/js/**.js
+  - jshint assets/js/**.js
+  - scss-lint assets/scss -c .scss-lint.yml
