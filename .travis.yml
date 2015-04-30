@@ -12,7 +12,7 @@ before_script:
   - gem install scss-lint
 
 script:
-  - jscs assets/js/**.js
-  - jsinspect assets/js/**.js
-  - jshint assets/js/**.js
+  - jscs assets/js/**/**.js
+  - jsinspect assets/js/**/**.js
+  - jshint assets/js/**/**.js
   - scss-lint assets/scss -c .scss-lint.yml
