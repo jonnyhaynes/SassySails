@@ -1,0 +1,80 @@
+/*------------------------------------*\
+  $FORMS
+\*------------------------------------*/
+
+$input-padding: 10px;
+$input-border-color: $black;
+
+fieldset {
+  border: 0;
+}
+
+legend {
+  margin-bottom: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+input {
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+input[type="number"],
+input[type="date"],
+input[type="url"],
+input[type="password"],
+textarea {
+  font-size: font-size(16);
+  padding: $input-padding;
+  width: 100%;
+  border: 1px solid $input-border-color;
+  -webkit-appearance: none;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+  display: inline-block;
+}
+
+input[type="submit"],
+button {
+  -webkit-appearance: none;
+
+  &::-moz-focus-inner,
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+
+/**
+ * `.field` should wrap a label and input
+ */
+
+.field {
+  margin-bottom: $base-spacing-unit;
+}
+
+/**
+ * `.field-choice` contains either
+ * radio buttons or checkboxes
+ */
+.field--choice {
+  label:last-child {
+    margin-bottom: 0;
+  }
+}

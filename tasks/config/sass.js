@@ -2,10 +2,13 @@ module.exports = function(grunt) {
 
     grunt.config.set('sass', {
         dev: {
+            options: {
+                require: 'susy'
+            },
             files: [{
                 expand: true,
                 cwd: 'assets/scss/',
-                src: ['main.scss'],
+                src: ['**/*.scss'],
                 dest: '.tmp/public/css/',
                 ext: '.css'
             }]

@@ -1,4 +1,4 @@
-exclude: []
+exclude: ['assets/scss/components/**', 'assets/scss/base/_reset.scss', 'assets/scss/print.scss']
 
 linters:
 

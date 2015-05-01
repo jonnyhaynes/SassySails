@@ -1,0 +1,145 @@
+/*------------------------------------*\
+  $TYPE
+\*------------------------------------*/
+
+/**
+ * Headings
+ */
+
+$h1-size: 42;
+$h2-size: 36;
+$h3-size: 30;
+$h4-size: 24;
+$h5-size: 18;
+$h6-size: 16;
+
+h1 {
+  font-size: font-size($h1-size);
+}
+
+h2 {
+  font-size: font-size($h2-size);
+}
+
+h3 {
+  font-size: font-size($h3-size);
+}
+
+h4 {
+  font-size: font-size($h4-size);
+}
+
+h5 {
+  font-size: font-size($h5-size);
+}
+
+h6 {
+  font-size: font-size($h6-size);
+}
+
+@include headings {
+  margin-bottom: 10px;
+}
+
+
+/**
+ * Paragraphs
+ */
+
+p {
+  margin-bottom: $base-spacing-unit;
+  line-height: $base-line-height * 1px;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+em,
+i,
+cite {
+  font-style: italic;
+}
+
+sup {
+  vertical-align: sup;
+  font-size: smaller;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+mark {
+  background: yellow;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+address {
+  margin-bottom: $base-spacing-unit;
+}
+
+
+/**
+ * Links
+ */
+
+a {
+  color: $link-colour;
+
+  @if ($link-underlined == false) {
+    text-decoration: none;
+  }
+
+  @include states() {
+    color: $link-colour-hover;
+
+    @if ($link-underlined-hover == false) {
+      text-decoration: none;
+    } @elseif ($link-underlined-hover == true) {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+/**
+ * Blockquotes
+ */
+
+q {
+  quotes: '\201C''\201D''\2018''\2019';
+
+  &:before {
+    content: open-quote;
+  }
+
+  &:after {
+    content: close-quote;
+  }
+}
+
+blockquote {
+  margin-bottom: 15px;
+
+  p {
+    &:before {
+      content: '\201C';
+    }
+
+    &:after {
+      content: '\201D';
+    }
+  }
+}

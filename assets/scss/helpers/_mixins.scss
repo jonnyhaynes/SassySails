@@ -1,0 +1,122 @@
+/*------------------------------------*\
+  $MIXINS
+\*------------------------------------*/
+
+/**
+ * Target devices based on pixel ratio
+ */
+@mixin device-pixel-ratio($ratio: 2) {
+  @media only screen and (-webkit-min-device-pixel-ratio: $ratio),
+  only screen and (min--moz-device-pixel-ratio: $ratio),
+  only screen and (-o-min-device-pixel-ratio: #{($ratio*10)}/10),
+  only screen and (min-device-pixel-ratio: $ratio),
+  only screen and (min-resolution: #{($ratio*96)}dpi),
+  only screen and (min-resolution: #{$ratio}dppx) {
+    @content;
+  }
+}
+
+
+/**
+ * Link states
+ *
+ * @include states {
+ *   color: blue;
+ * }
+ */
+@mixin states() {
+  &:hover,
+  &:active,
+  &:focus {
+    @content;
+  }
+}
+
+
+/**
+ * Style all headings at once
+ *
+ * @include headings {
+ *   color: red;
+ * }
+ */
+@mixin headings() {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @content;
+  }
+}
+
+
+/**
+ * Vertically align an element
+ * inside its container
+ *
+ * .thing {  @include vertically-align; }
+ */
+@mixin vertically-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+/**
+ * Horizontally align an element
+ * inside its container
+ *
+ * .thing {  @include horizontally-align; }
+ */
+@mixin horizontally-align {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/**
+ * Centrally align an element
+ * inside its container
+ *
+ * .thing {  @include centrally-align; }
+ */
+@mixin centrally-align {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/**
+ * SVG background images with fallback
+ *
+ * .thing { @include svg-background(icon-red); }
+ */
+@mixin svg-background($image) {
+  $svg-image: $image + '.svg';
+  $png-image: $image + '.png';
+  background-image: file-url($svg-image);
+
+  .no-svg & {
+    background-image: file-url($png-image);
+  }
+}
+
+
+/**
+ * Set the position and top, right, bottom, left values
+ *
+ * .thing {  @include position(relative, 0, 1px, 10px, 0); }
+ */
+@mixin position($position, $top, $right, $bottom, $left) {
+  position: $position;
+  @if $top { top: $top; }
+  @if $right { right: $right; }
+  @if $bottom { bottom: $bottom; }
+  @if $left { left: $left; }
+}
