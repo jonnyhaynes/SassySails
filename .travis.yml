@@ -13,6 +13,6 @@ before_script:
 
 script:
   - jscs assets/js/**/*.js
-  - jsinspect assets/js/**/*.js --ignore assets/js/dependencies/sails.io.js
+  - jsinspect assets/js/**/*.js
   - jshint assets/js/**/*.js
   - scss-lint assets/scss -c .scss-lint.yml
