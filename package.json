@@ -1,7 +1,7 @@
 {
   "name": "SassySails",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A brand new Sails.js app set up to run Sass as standard.",
   "keywords": [],
   "dependencies": {
