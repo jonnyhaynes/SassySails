@@ -1,5 +1,5 @@
 # SassySails
-[![Build Status](https://travis-ci.org/jonnyhaynes/SassySails.svg)](https://travis-ci.org/jonnyhaynes/SassySails) [![Code Climate](https://codeclimate.com/github/jonnyhaynes/SassySails/badges/gpa.svg)](https://codeclimate.com/github/jonnyhaynes/SassySails)
+[![Build Status](https://travis-ci.org/jonnyhaynes/SassySails.svg)](https://travis-ci.org/jonnyhaynes/SassySails) [![Code Climate](https://codeclimate.com/github/jonnyhaynes/SassySails/badges/gpa.svg)](https://codeclimate.com/github/jonnyhaynes/SassySails) [![Dependency Status](https://david-dm.org/jonnyhaynes/SassySails.svg)](https://david-dm.org/jonnyhaynes/SassySails)
 
 A brand new [Sails.js](http://sailsjs.org/) app set up to run [Sass](http://sass-lang.com/) as standard. Includes modular JS and CSS integrated from [PowerHouse](https://github.com/powerhouse-industries/front-end-starter).
 
