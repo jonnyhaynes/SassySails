@@ -1,4 +1,0 @@
-{
-  "ignore":        "assets/js/dependencies/sails.io.js",
-  "reporter":      "json",
-}
