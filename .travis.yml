@@ -13,6 +13,6 @@ before_script:
 
 script:
   - jscs assets/js/**/*.js
-  - jsinspect assets/js/**/*.js -i assets/js/dependencies/*.js
+  - jsinspect assets/js/**/*.js -i assets/js/dependencies/**.js
   - jshint assets/js/**/*.js
   - scss-lint assets/scss -c .scss-lint.yml
