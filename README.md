@@ -32,5 +32,6 @@ At this point, if you visit (http://localhost:1337/) you will see the default ho
 * Swap EJS for Handlebars or something similar
 
 ## Changelog
+* 06/05/15: 0.3.0 - Updated dependencies
 * 01/05/15: 0.2.0 - Now includes Modular JS and CSS from PowerHouse
 * 30/04/15: 0.1.0 - First release
