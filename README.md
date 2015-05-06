@@ -17,12 +17,12 @@ git clone git@github.com:jonnyhaynes/SassySails.git testProject
 
 Install the Node dependencies
 ```
+cd testProject
 npm install
 ```
 
 Now lift the server:
 ```
-cd testProject
 sails lift
 ```
 
